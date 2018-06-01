@@ -1,31 +1,30 @@
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
     <title>Home</title>
 </head>
-<body>
-<h1>Practica 2 </h1>
-<ul>
-    <li><a href="/" >Inicio</a></li>
-    <li><a href="/insert" >Nuevo Estudiante</a></li>
-    <li><a href="/update/0" >Editar Estudiante</a></li>
+<body style="background-color: beige;">
+<h1 style="float: center; font-family: Arial">Practica 2 </h1>
+<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+    <li style="float: left; font-family: Arial;"><a href="/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Inicio</a></li>
+    <li style="float: left; font-family: Arial;"><a href="/insert" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Nuevo Estudiante</a></li>
+    <li style="float: left; font-family: Arial;"><a href="/update/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Editar Estudiante</a></li>
 </ul>
 </br>
-<table>
+<table style="background: black;">
     <thead>
     <tr>
-        <th>Matrícula</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Teléfono</th>
-        <th>Update</th>
-        <th>Delete</th>
-        <th>Check</th>
+        <th style="color: azure;">Matrícula</th>
+        <th style="color: azure;">Nombre</th>
+        <th style="color: azure;">Apellidos</th>
+        <th style="color: azure;">Teléfono</th>
+        <th style="color: azure;">Update</th>
+        <th style="color: azure;">Delete</th>
+        <th style="color: azure;">Check</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody >
             <#list lista as estudiante>
-            <tr>
+            <tr style="border: black 2px; background: aqua;">
                 <td>${estudiante.matricula?c} </td>
                 <td>${estudiante.nombre} </td>
                 <td>${estudiante.apellido} </td>

@@ -48,8 +48,7 @@ public class Main {
         });
 
         get("/insert", (request, response) -> {
-            Template homeTemplate = configuration.getTemplate("templates/insertEstudiante.ftl");
-            return homeTemplate;
+            return configuration.getTemplate("templates/insertEstudiante.ftl");
         });
 
         post("/insert2list", (request, response) -> {

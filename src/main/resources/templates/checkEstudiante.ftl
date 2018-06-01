@@ -7,24 +7,24 @@
 
 </head>
 
-<body>
+<body style="background-color: beige;">
 
 
 <nav >
     <div >
         <div >
-            <ul >
-                <li >
-                    <a  href="/">Inicio</a>
+            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Inicio</a>
                 </li>
-                <li >
-                    <a  href="/insert">Agregar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/insert" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Agregar</a>
                 </li>
-                <li >
-                    <a  href="/update/0">Modificar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/update/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Modificar</a>
                 </li>
-                <li >
-                    <a  href="/deletefromlist/0">Eliminar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/deletefromlist/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Eliminar</a>
                 </li>
             </ul>
         </div>
@@ -33,16 +33,16 @@
 
 <div >
     <header >
-        <h1 >Mostrar estudiante</h1>
+        <h1 style="float: center; font-family: Arial">Mostrar estudiante</h1>
     </header>
     <hr>
     <div >
         <div >
             <ul >
-                <li ><span >Matricula: </span>${actual.matricula?c}</span></li>
-                <li ><span >Nombre: </span>${actual.nombre}</li>
-                <li ><span >Apellido: </span>${actual.apellido}</li>
-                <li ><span >Teléfono: </span>${actual.telefono}</li>
+                <li style="font-family: Arial"><span > <strong> Matricula:</strong> </span>${actual.matricula?c}</li>
+                <li style="font-family: Arial"><span > <strong> Nombre: </strong> </span>${actual.nombre}</li>
+                <li style="font-family: Arial"><span > <strong> Apellido:</strong> </span>${actual.apellido}</li>
+                <li style="font-family: Arial"><span > <strong> Teléfono: </strong></span>${actual.telefono}</li>
             </ul>
         </div>
     </div>

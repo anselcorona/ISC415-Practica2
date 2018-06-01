@@ -2,27 +2,30 @@
 <html>
 
 <head>
-    <title>Modificar Estudiante</title>
+    <title style="float: center; font-family: Arial">Modificar Estudiante</title>
 </head>
 
-<body>
+<body style="background-color: beige;">
 
-<!-- Navigation -->
+<header >
+    <h1 style="font-family: Arial;">Modificar estudiante</h1>
+</header>
+
 <nav >
     <div >
         <div >
-            <ul >
-                <li >
-                    <a  href="/">Inicio</a>
+            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Inicio</a>
                 </li>
-                <li >
-                    <a  href="/insert">Agregar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/insert" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Agregar</a>
                 </li>
-                <li >
-                    <a  href="/update/0">Modificar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/update/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Modificar</a>
                 </li>
-                <li >
-                    <a  href="/deletefromlist/0">Eliminar</a>
+                <li style="float: left; font-family: Arial;">
+                    <a  href="/deletefromlist/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Eliminar</a>
                 </li>
             </ul>
         </div>
@@ -31,9 +34,6 @@
 
 <div >
 
-    <header >
-        <h1 >Modificar estudiante</h1>
-    </header>
     <hr>
     <form method="post" action="/update2list">
 
