@@ -4,12 +4,9 @@ import encapsulacion.Estudiante;
 import servicios.EstudianteService;
 
 import java.io.StringWriter;
-import java.io.Writer;
-import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.lang.Math.toIntExact;
 import static spark.Spark.*;
 import freemarker.template.*;
 
@@ -73,7 +70,7 @@ public class Main {
 
         get("/deletefromlist/:matricula", (request, response) -> {
             StringWriter stringWriter = new StringWriter();
-            int matricula = toIntExact((Long) NumberFormat.getNumberInstance(java.util.Locale.US).parse(request.params("matricula")));
+            int matricula = Integer.parseInt(request.params("matricula"));
 
             estudianteService.delete(estudianteService.getByMatricula(matricula));
             response.redirect("/");
@@ -84,10 +81,10 @@ public class Main {
             Template result = configuration.getTemplate("templates/updateEstudiante.ftl");
             StringWriter stringWriter = new StringWriter();
 
-            int matricula = toIntExact((Long) NumberFormat.getNumberInstance(java.util.Locale.US).parse(request.params("matricula")));
+            int matricula = Integer.parseInt(request.params("matricula"));
 
             Map<String, Object> params = new HashMap<>();
-            params.put("actual", estudianteService.getByMatricula(matricula));
+            params.put("actual", estudianteService.getByMatricula(matricula)!=null?estudianteService.getByMatricula(matricula):new Estudiante());
 
             result.process(params,stringWriter);
             return stringWriter;
@@ -97,7 +94,7 @@ public class Main {
             StringWriter stringWriter = new StringWriter();
 
             try {
-                int matricula = toIntExact((Long) NumberFormat.getNumberInstance(java.util.Locale.US).parse(request.params("matricula")));
+                int matricula = Integer.parseInt(request.queryParams("matricula"));
                 Estudiante e = estudianteService.getByMatricula(matricula);
 
                 e.setNombre(request.queryMap().get("nombre").value());
@@ -105,23 +102,25 @@ public class Main {
                 e.setTelefono(request.queryMap().get("telefono").value());
 
                 estudianteService.update(e);
-                response.redirect("/");
+                response.redirect("/home");
             }catch (Exception e){
+                e.printStackTrace();
                 System.out.println("Estudiante no encontrado");
+                response.redirect("/");
             }
 
             return stringWriter;
         });
 
-        get("/check", (request, response) -> {
+        get("/check/:matricula", (request, response) -> {
             Template result = configuration.getTemplate("templates/checkEstudiante.ftl");
             StringWriter stringWriter = new StringWriter();
 
-            int matricula = toIntExact((Long) NumberFormat.getNumberInstance(java.util.Locale.US).parse(request.params("matricula")));
+            int matricula = Integer.parseInt(request.params("matricula"));
             Estudiante e = estudianteService.getByMatricula(matricula);
             if(e!=null){
                 Map<String, Object> params = new HashMap<>();
-                params.put("actual", e);
+                params.put("actual", estudianteService.getByMatricula(matricula)!=null?estudianteService.getByMatricula(matricula):new Estudiante());
 
                 result.process(params, stringWriter);
                 return stringWriter;

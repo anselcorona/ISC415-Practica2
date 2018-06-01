@@ -39,17 +39,17 @@
 
         <div >
             <label for="matricula">Matricula</label>
-            <input type="text" id="matricula" name="matricula" value='${actual.matricula}' required>
+            <input type="text" id="matricula" name="matricula" value='${actual.matricula?c}' required>
         </div>
 
         <div>
             <label for="nombre">Nombre</label>
-            <input type="text"id="nombre" name="nombre" placeholder="Nombre" value='${actual.nombre}' required>
+            <input type="text" id="nombre" name="nombre" value='${actual.nombre}' required>
         </div>
 
         <div>
             <label for="apellido">Apellido</label>
-            <input type="text"  id="apellido" name="apellido" value='${actual.apellido}'required>
+            <input type="text"  id="apellido" name="apellido" value='${actual.apellido}' required>
         </div>
 
         <div >

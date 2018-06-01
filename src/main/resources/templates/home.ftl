@@ -8,7 +8,7 @@
 <ul>
     <li><a href="/" >Inicio</a></li>
     <li><a href="/insert" >Nuevo Estudiante</a></li>
-    <li><a href="/update" >Editar Estudiante</a></li>
+    <li><a href="/update/0" >Editar Estudiante</a></li>
 </ul>
 </br>
 <table>
@@ -26,13 +26,13 @@
     <tbody>
             <#list lista as estudiante>
             <tr>
-                <td>${estudiante.matricula} </td>
+                <td>${estudiante.matricula?c} </td>
                 <td>${estudiante.nombre} </td>
                 <td>${estudiante.apellido} </td>
                 <td>${estudiante.telefono} </td>
-                <td><a href="/update/${estudiante.matricula}" role="button">update</a></td>
-                <td><a href="/deletefromlist/${estudiante.matricula}" role="button">delete</a></td>
-                <td><a href="/check/${estudiante.matricula}" role="button">check</a></td>
+                <td><a href="/update/${estudiante.matricula?c}" role="button">update</a></td>
+                <td><a href="/deletefromlist/${estudiante.matricula?c}" role="button">delete</a></td>
+                <td><a href="/check/${estudiante.matricula?c}" role="button">check</a></td>
             </tr>
             </#list>
     </tbody>

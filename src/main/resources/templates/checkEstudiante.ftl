@@ -31,18 +31,15 @@
     </div>
 </nav>
 
-<!-- Page Content -->
 <div >
     <header >
-        <h1 >Mostrar un estudiante</h1>
-        <p >Aquí se muestra toda la información de un estudiante en específico.</p>
+        <h1 >Mostrar estudiante</h1>
     </header>
     <hr>
     <div >
-        <div><h3><span>Mostrando el estudiante --> ${actual.nombre}</span></h3></div>
         <div >
             <ul >
-                <li ><span >Matricula: </span>${actual.matricula}</span></li>
+                <li ><span >Matricula: </span>${actual.matricula?c}</span></li>
                 <li ><span >Nombre: </span>${actual.nombre}</li>
                 <li ><span >Apellido: </span>${actual.apellido}</li>
                 <li ><span >Teléfono: </span>${actual.telefono}</li>
@@ -50,7 +47,6 @@
         </div>
     </div>
 </div>
-<!-- /.container -->
 
 
 </body>

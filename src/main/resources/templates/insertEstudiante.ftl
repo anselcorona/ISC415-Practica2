@@ -7,7 +7,6 @@
 
 <body>
 
-<!-- Navigation -->
 <nav >
     <div >
         <div >
