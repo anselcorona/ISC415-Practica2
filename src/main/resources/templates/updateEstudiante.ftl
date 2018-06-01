@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title style="float: center; font-family: Arial">Modificar Estudiante</title>
+    <title style="float: center;">Modificar Estudiante</title>
 </head>
 
 <body style="background-color: beige;">

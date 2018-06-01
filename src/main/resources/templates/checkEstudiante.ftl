@@ -9,7 +9,9 @@
 
 <body style="background-color: beige;">
 
-
+<header >
+    <h1 style="float: center; font-family: Arial">Check estudiante</h1>
+</header>
 <nav >
     <div >
         <div >
@@ -32,9 +34,6 @@
 </nav>
 
 <div >
-    <header >
-        <h1 style="float: center; font-family: Arial">Mostrar estudiante</h1>
-    </header>
     <hr>
     <div >
         <div >
