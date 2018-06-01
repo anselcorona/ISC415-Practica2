@@ -22,7 +22,7 @@ public class Main {
         //Inicializamos el servicio que gestiona las operaciones
         EstudianteService estudianteService = new EstudianteService();
 
-        //Insertamos Estudiantes para comenzar14
+        //Insertamos Estudiantes para comenzar
         estudianteService.insert(new Estudiante(20140031, "Ansel", "Corona", "8295464950"));
         estudianteService.insert(new Estudiante(20110143, "Neuly", "Corona", "8298504950"));
         estudianteService.insert(new Estudiante(20231423, "Super", "Prepa", "8791442134"));
@@ -60,6 +60,7 @@ public class Main {
                 String telefono = request.queryParams("telefono");
                 Estudiante e = new Estudiante(Integer.parseInt(matricula), nombre, apellido, telefono);
                 estudianteService.insert(e);
+                response.redirect("/");
             }catch (Exception e){
                 e.printStackTrace();
                 response.redirect("/insert");

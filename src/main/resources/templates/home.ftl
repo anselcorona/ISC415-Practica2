@@ -10,7 +10,7 @@
     <li style="float: left; font-family: Arial;"><a href="/update/0" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Editar Estudiante</a></li>
 </ul>
 </br>
-<table border="2" style="background: black;">
+<table border="2" style="background: black;" cellpadding="10">
     <thead>
     <tr>
         <th style="color: azure;">Matrícula</th>
