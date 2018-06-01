@@ -10,7 +10,7 @@
 <body style="background-color: beige;">
 
 <header >
-    <h1 style="float: center; font-family: Arial">Check estudiante</h1>
+    <h1 style="float: center; font-family: Arial;">Check estudiante</h1>
 </header>
 <nav >
     <div >
